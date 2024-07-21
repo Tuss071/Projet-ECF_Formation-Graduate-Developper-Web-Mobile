@@ -1,5 +1,6 @@
-@import url("/nodes_modules/bootstrap/bootstrap-icons-1.11.3/bootstrap-icons.css");
+@import url("/nodes_modules/bootstrap/bootstrap-icons-1.11.3/fonts/bootstrap-icons.css");
 @import 'custom';
+
 html{
     position:relative;
     min-height: 100%;
@@ -24,7 +25,7 @@ p{
 .hero-scene{
     position:relative;
     margin-bottom : 15px;
-    &:before{
+    &::before{
         content:"";
         position: absolute;
         top:O;
