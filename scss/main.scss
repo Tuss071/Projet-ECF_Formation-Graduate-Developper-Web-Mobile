@@ -52,44 +52,19 @@ p{
     }
 }
 
-.image-card{
-    position:relative;
-    &:hover{
-        .titre-image{
-        .action-image-buttons{
-            opacity: 1;
-        }
-        img{
-           filter: brightness(0.3);
-        }
-    }
-
-        .action-image-buttons{
-        position : absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 5px;
-        display: flex;
-        justify-content: space-between;
-        opacity: 0;
-        transition: all 0.3s;
-    }
-    }
-
+  //Paramètrage des images
     img{
-        transition: all 0.3s;
+        object-fit: contain;
+        width: auto; 
+        max-height: 100%; 
     }
 
-    .titre-image{
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: all 0.3s;
+    .image-card{
+        position:relative;
+        right: -340px;
+        height: 250px;
+        width:250px;
     }
-}
 
     .form-label{
         color: $primary;
@@ -102,3 +77,13 @@ p{
         padding:10px;
     }
 }   
+
+   // Position inputs page Connexion
+input[type=text], input[type=password], input[type=email] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
