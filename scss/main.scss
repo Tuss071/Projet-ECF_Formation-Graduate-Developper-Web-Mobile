@@ -1,4 +1,4 @@
-@import url("/nodes_modules/bootstrap/bootstrap-icons-1.11.3/fonts/bootstrap-icons.css");
+@import url("/css/bootstrap-icons.css");
 @import 'custom';
 
 html{
@@ -89,9 +89,9 @@ input[type=text], input[type=password], input[type=email] {
     box-sizing: border-box;
 }
 
-//inputcom[type=text] {
+/*inputcom[type=text] {
     width: 100%;
-}
+}*/
 
 .form-label{
     color: $primary;
