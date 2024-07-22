@@ -19,6 +19,8 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: npm install
+        run: npm install
       - name: Remove package.json if exists
         run: rm -f package.json
       - name: Build And Deploy
