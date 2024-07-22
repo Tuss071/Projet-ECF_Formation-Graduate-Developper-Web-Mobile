@@ -12018,6 +12018,10 @@ p {
   justify-content: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 img {
   -o-object-fit: contain;
      object-fit: contain;
