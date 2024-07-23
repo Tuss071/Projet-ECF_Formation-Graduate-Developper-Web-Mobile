@@ -24,7 +24,7 @@
           <a class="nav-link" href="/">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/visit">Habitats & animaux</a>
+          <a class="nav-link" href="/visit">Habitats & animaux</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/services">Services</a>
@@ -32,8 +32,11 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/signin">Connexion Employé / Vétérinaire</a>
+        <li class="nav-item" data-show="disconnected">
+          <a class="nav-link" href="/signin">Connexion</a>
+        </li>
+        <li class="nav-item" data-show="connected">
+          <button class="nav-link" id="signout-btn">Déconnexion</button>
         </li>
       </ul>
     </div>
@@ -69,7 +72,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="RenduDynamic_js/script.js"></script>
     <script type="module" src="/Router/Router.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
