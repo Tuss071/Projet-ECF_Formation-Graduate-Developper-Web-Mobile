@@ -87,6 +87,7 @@
     </article>
 </section>
 
+<!-- contenu des avis-->
 <section>
     <article>
         <div class="container p-4">
@@ -99,16 +100,51 @@
                 </div>
             </div>
         </div>
-            <li>
-               <label for="name">Pseudo :&nbsp;</label>   
-               <input type="text" id="name" name="user_name" />
-            </li>
-            <li>
-               <label for="msg">Message :&nbsp;</label>
-               <textarea id="msg" name="user_message" rows="10" cols="135"></textarea>
-            </li>
-        <div class="text-center pt-3">
-            <button type="submit" class="btn btn-primary">donner votre avis</button>
-        </div>
+        <form action="" method="donner votre avis">
+            <label for="name">Pseudo :&nbsp;</label><br>  
+            <input type="text" id="name" name="user_name" />
+
+            <label for="message">Message :&nbsp;</label><br> 
+            <textarea id="message" name="message" rows="10" cols="135"></textarea>
+    
+     <div class="text-center pt-3">
+         <button type="submit" class="btn btn-primary">donner votre avis</button>
+     </div> 
+
+     <? php        
+$name = $ poster["name"];
+$text = $ poster["message"];
+$post = $ poster["donner votre avis"];
+
+if($post){
+   <!-- Noter les commentaires -->
+   $write = fopen("com.txt", "a+");
+   fwrite($write, "<u><b>$name</b></u><br>$text<br>");
+   fclose($wrrite);
+
+   <!-- Afficher les commentaires -->
+   $read = fopen("com.txt", "r+t");
+   echo "Vos avis:<br>";
+
+   while(!feof($read)){
+       echo fread($read, 1024);
+   }
+
+   fclose($read);
+}
+
+else{
+   <!-- Afficher les commentaires -->
+   $read = fopen("com.txt", "r+t");
+   echo "Vos avis:<br>";
+
+   while(!feof($read)){
+       echo fread($read, 1024);
+   }
+
+   fclose($read);           
+}
+?>
+    </form>
     </article>
 </section>
